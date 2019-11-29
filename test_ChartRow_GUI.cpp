@@ -1,6 +1,5 @@
 #include "ChartRow.h"
-#include <stdio.h>
-#include "ui_header.h"
+#include "DataProcessor.h"
 
 
 

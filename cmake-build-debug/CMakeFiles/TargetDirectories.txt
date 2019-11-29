@@ -1,3 +1,4 @@
 /Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles/edit_cache.dir
 /Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles/chart_system.dir
+/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles/chart_system_autogen.dir

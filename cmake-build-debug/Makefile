@@ -123,6 +123,19 @@ chart_system/fast:
 	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/build
 .PHONY : chart_system/fast
 
+#=============================================================================
+# Target rules for targets named chart_system_autogen
+
+# Build rule for target.
+chart_system_autogen: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 chart_system_autogen
+.PHONY : chart_system_autogen
+
+# fast build rule for target.
+chart_system_autogen/fast:
+	$(MAKE) -f CMakeFiles/chart_system_autogen.dir/build.make CMakeFiles/chart_system_autogen.dir/build
+.PHONY : chart_system_autogen/fast
+
 Channel_Count.o: Channel_Count.cpp.o
 
 .PHONY : Channel_Count.o
@@ -339,6 +352,33 @@ Scroll_Speed.cpp.s:
 	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/Scroll_Speed.cpp.s
 .PHONY : Scroll_Speed.cpp.s
 
+chart_system_autogen/mocs_compilation.o: chart_system_autogen/mocs_compilation.cpp.o
+
+.PHONY : chart_system_autogen/mocs_compilation.o
+
+# target to build an object file
+chart_system_autogen/mocs_compilation.cpp.o:
+	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/chart_system_autogen/mocs_compilation.cpp.o
+.PHONY : chart_system_autogen/mocs_compilation.cpp.o
+
+chart_system_autogen/mocs_compilation.i: chart_system_autogen/mocs_compilation.cpp.i
+
+.PHONY : chart_system_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+chart_system_autogen/mocs_compilation.cpp.i:
+	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/chart_system_autogen/mocs_compilation.cpp.i
+.PHONY : chart_system_autogen/mocs_compilation.cpp.i
+
+chart_system_autogen/mocs_compilation.s: chart_system_autogen/mocs_compilation.cpp.s
+
+.PHONY : chart_system_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+chart_system_autogen/mocs_compilation.cpp.s:
+	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/chart_system_autogen/mocs_compilation.cpp.s
+.PHONY : chart_system_autogen/mocs_compilation.cpp.s
+
 test_ChartRow_GUI.o: test_ChartRow_GUI.cpp.o
 
 .PHONY : test_ChartRow_GUI.o
@@ -375,6 +415,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... chart_system"
+	@echo "... chart_system_autogen"
 	@echo "... Channel_Count.o"
 	@echo "... Channel_Count.i"
 	@echo "... Channel_Count.s"
@@ -399,6 +440,9 @@ help:
 	@echo "... Scroll_Speed.o"
 	@echo "... Scroll_Speed.i"
 	@echo "... Scroll_Speed.s"
+	@echo "... chart_system_autogen/mocs_compilation.o"
+	@echo "... chart_system_autogen/mocs_compilation.i"
+	@echo "... chart_system_autogen/mocs_compilation.s"
 	@echo "... test_ChartRow_GUI.o"
 	@echo "... test_ChartRow_GUI.i"
 	@echo "... test_ChartRow_GUI.s"

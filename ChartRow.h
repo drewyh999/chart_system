@@ -11,21 +11,23 @@
 #include "Scroll_Speed.h"
 #include "DataProcessor.h"
 
+
 class ChartRow : public QWidget{
     Q_OBJECT
 signals:
-    void RequestForChange(QString mode){};
+    void RequestForChange (const QString &text);
 private:
     QChart *Cchart;//用于显示一个通道的数据
-    QScrollBar *HScrollBar;//x轴滚动条
-    QScrollBar *VScrollBar;//y轴滚动条
+    QLineSeries *series;//曲线
+    QScrollBar *XScrollBar;//x轴滚动条
+    QScrollBar *YScrollBar;//y轴滚动条
     QComboBox *comboBox;//用于选取变换的多选框
     int YScrollValue;//用于保存当前y轴滚动条的值
     int XScrollValue;//用于保存当前x轴滚动条的值
     int scrollSpeed;//用于保存滚动速度
     QValueAxis *XAxis;//图表的X轴
     QValueAxis *YAxis;//图表的Y轴
-
+    bool isScrolling;//是否在滚动当中
     //信号槽
 public slots:
     //通过滚动条值的改变，发出信号让chart显示数据的不同部分，来实现滚动显示数据的效果
@@ -37,11 +39,11 @@ public slots:
     void OnXScrollValueChange(int value);//用于接收x轴滚动条值改变的信号的函数
     void OnXAxisRangeChange(qreal min, qreal max);//用于接收X轴范围改变的信号的函数
     void OnYAxisRangeChange(qreal min, qreal max);//用于接收Y轴范围改变的信号的函数
-    void OnComboBoxChange();//用于接收combobox改变信号
+    void OnComboBoxChange(const QString &text);//用于接收combobox改变信号
 public :
     ChartRow();
-    ~ChartRow(){ delete(this);}
+    ~ChartRow(){ }
 };
 
-
+//#include "moc_ChartRow.cpp"
 #endif //CHART_SYSTEM_CHARTROW_H

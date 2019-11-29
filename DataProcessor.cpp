@@ -4,7 +4,9 @@
 
 #include "DataProcessor.h"
 
+
 void DataProcessor::Process(QString mode) {
+    DBGprint("Data received\n");
     emit(DataChanged(data));
 }
 
