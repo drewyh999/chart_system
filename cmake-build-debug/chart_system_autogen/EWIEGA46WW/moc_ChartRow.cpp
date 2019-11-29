@@ -24,7 +24,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ChartRow_t {
     QByteArrayData data[20];
-    char stringdata0[242];
+    char stringdata0[235];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,25 +39,25 @@ QT_MOC_LITERAL(2, 26, 0), // ""
 QT_MOC_LITERAL(3, 27, 4), // "text"
 QT_MOC_LITERAL(4, 32, 6), // "RePlot"
 QT_MOC_LITERAL(5, 39, 12), // "QList<short>"
-QT_MOC_LITERAL(6, 52, 13), // "SetCurveColor"
-QT_MOC_LITERAL(7, 66, 12), // "Curve_Color*"
-QT_MOC_LITERAL(8, 79, 10), // "curveColor"
-QT_MOC_LITERAL(9, 90, 14), // "SetScrollSpeed"
-QT_MOC_LITERAL(10, 105, 13), // "Scroll_Speed*"
-QT_MOC_LITERAL(11, 119, 11), // "scrollSpeed"
-QT_MOC_LITERAL(12, 131, 20), // "OnYScrollValueChange"
-QT_MOC_LITERAL(13, 152, 5), // "value"
-QT_MOC_LITERAL(14, 158, 20), // "OnXScrollValueChange"
-QT_MOC_LITERAL(15, 179, 18), // "OnXAxisRangeChange"
-QT_MOC_LITERAL(16, 198, 3), // "min"
-QT_MOC_LITERAL(17, 202, 3), // "max"
-QT_MOC_LITERAL(18, 206, 18), // "OnYAxisRangeChange"
-QT_MOC_LITERAL(19, 225, 16) // "OnComboBoxChange"
+QT_MOC_LITERAL(6, 52, 9), // "chartdata"
+QT_MOC_LITERAL(7, 62, 13), // "SetCurveColor"
+QT_MOC_LITERAL(8, 76, 9), // "Property*"
+QT_MOC_LITERAL(9, 86, 10), // "curveColor"
+QT_MOC_LITERAL(10, 97, 14), // "SetScrollSpeed"
+QT_MOC_LITERAL(11, 112, 11), // "scrollSpeed"
+QT_MOC_LITERAL(12, 124, 20), // "OnYScrollValueChange"
+QT_MOC_LITERAL(13, 145, 5), // "value"
+QT_MOC_LITERAL(14, 151, 20), // "OnXScrollValueChange"
+QT_MOC_LITERAL(15, 172, 18), // "OnXAxisRangeChange"
+QT_MOC_LITERAL(16, 191, 3), // "min"
+QT_MOC_LITERAL(17, 195, 3), // "max"
+QT_MOC_LITERAL(18, 199, 18), // "OnYAxisRangeChange"
+QT_MOC_LITERAL(19, 218, 16) // "OnComboBoxChange"
 
     },
     "ChartRow\0RequestForChange\0\0text\0RePlot\0"
-    "QList<short>\0SetCurveColor\0Curve_Color*\0"
-    "curveColor\0SetScrollSpeed\0Scroll_Speed*\0"
+    "QList<short>\0chartdata\0SetCurveColor\0"
+    "Property*\0curveColor\0SetScrollSpeed\0"
     "scrollSpeed\0OnYScrollValueChange\0value\0"
     "OnXScrollValueChange\0OnXAxisRangeChange\0"
     "min\0max\0OnYAxisRangeChange\0OnComboBoxChange"
@@ -82,8 +82,8 @@ static const uint qt_meta_data_ChartRow[] = {
 
  // slots: name, argc, parameters, tag, flags
        4,    1,   62,    2, 0x0a /* Public */,
-       6,    1,   65,    2, 0x0a /* Public */,
-       9,    1,   68,    2, 0x0a /* Public */,
+       7,    1,   65,    2, 0x0a /* Public */,
+      10,    1,   68,    2, 0x0a /* Public */,
       12,    1,   71,    2, 0x0a /* Public */,
       14,    1,   74,    2, 0x0a /* Public */,
       15,    2,   77,    2, 0x0a /* Public */,
@@ -94,9 +94,9 @@ static const uint qt_meta_data_ChartRow[] = {
     QMetaType::Void, QMetaType::QString,    3,
 
  // slots: parameters
-    QMetaType::Void, 0x80000000 | 5,    2,
-    QMetaType::Void, 0x80000000 | 7,    8,
-    QMetaType::Void, 0x80000000 | 10,   11,
+    QMetaType::Void, 0x80000000 | 5,    6,
+    QMetaType::Void, 0x80000000 | 8,    9,
+    QMetaType::Void, 0x80000000 | 8,   11,
     QMetaType::Void, QMetaType::Int,   13,
     QMetaType::Void, QMetaType::Int,   13,
     QMetaType::Void, QMetaType::QReal, QMetaType::QReal,   16,   17,
@@ -114,8 +114,8 @@ void ChartRow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         switch (_id) {
         case 0: _t->RequestForChange((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 1: _t->RePlot((*reinterpret_cast< const QList<short>(*)>(_a[1]))); break;
-        case 2: _t->SetCurveColor((*reinterpret_cast< Curve_Color*(*)>(_a[1]))); break;
-        case 3: _t->SetScrollSpeed((*reinterpret_cast< Scroll_Speed*(*)>(_a[1]))); break;
+        case 2: _t->SetCurveColor((*reinterpret_cast< Property*(*)>(_a[1]))); break;
+        case 3: _t->SetScrollSpeed((*reinterpret_cast< Property*(*)>(_a[1]))); break;
         case 4: _t->OnYScrollValueChange((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 5: _t->OnXScrollValueChange((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 6: _t->OnXAxisRangeChange((*reinterpret_cast< qreal(*)>(_a[1])),(*reinterpret_cast< qreal(*)>(_a[2]))); break;

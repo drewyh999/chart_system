@@ -271,6 +271,33 @@ DataProcessor.cpp.s:
 	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/DataProcessor.cpp.s
 .PHONY : DataProcessor.cpp.s
 
+MainController.o: MainController.cpp.o
+
+.PHONY : MainController.o
+
+# target to build an object file
+MainController.cpp.o:
+	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/MainController.cpp.o
+.PHONY : MainController.cpp.o
+
+MainController.i: MainController.cpp.i
+
+.PHONY : MainController.i
+
+# target to preprocess a source file
+MainController.cpp.i:
+	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/MainController.cpp.i
+.PHONY : MainController.cpp.i
+
+MainController.s: MainController.cpp.s
+
+.PHONY : MainController.s
+
+# target to generate assembly for a file
+MainController.cpp.s:
+	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/MainController.cpp.s
+.PHONY : MainController.cpp.s
+
 MainWindow.o: MainWindow.cpp.o
 
 .PHONY : MainWindow.o
@@ -379,32 +406,32 @@ chart_system_autogen/mocs_compilation.cpp.s:
 	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/chart_system_autogen/mocs_compilation.cpp.s
 .PHONY : chart_system_autogen/mocs_compilation.cpp.s
 
-test_ChartRow_GUI.o: test_ChartRow_GUI.cpp.o
+main.o: main.cpp.o
 
-.PHONY : test_ChartRow_GUI.o
+.PHONY : main.o
 
 # target to build an object file
-test_ChartRow_GUI.cpp.o:
-	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/test_ChartRow_GUI.cpp.o
-.PHONY : test_ChartRow_GUI.cpp.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-test_ChartRow_GUI.i: test_ChartRow_GUI.cpp.i
+main.i: main.cpp.i
 
-.PHONY : test_ChartRow_GUI.i
+.PHONY : main.i
 
 # target to preprocess a source file
-test_ChartRow_GUI.cpp.i:
-	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/test_ChartRow_GUI.cpp.i
-.PHONY : test_ChartRow_GUI.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-test_ChartRow_GUI.s: test_ChartRow_GUI.cpp.s
+main.s: main.cpp.s
 
-.PHONY : test_ChartRow_GUI.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-test_ChartRow_GUI.cpp.s:
-	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/test_ChartRow_GUI.cpp.s
-.PHONY : test_ChartRow_GUI.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -431,6 +458,9 @@ help:
 	@echo "... DataProcessor.o"
 	@echo "... DataProcessor.i"
 	@echo "... DataProcessor.s"
+	@echo "... MainController.o"
+	@echo "... MainController.i"
+	@echo "... MainController.s"
 	@echo "... MainWindow.o"
 	@echo "... MainWindow.i"
 	@echo "... MainWindow.s"
@@ -443,9 +473,9 @@ help:
 	@echo "... chart_system_autogen/mocs_compilation.o"
 	@echo "... chart_system_autogen/mocs_compilation.i"
 	@echo "... chart_system_autogen/mocs_compilation.s"
-	@echo "... test_ChartRow_GUI.o"
-	@echo "... test_ChartRow_GUI.i"
-	@echo "... test_ChartRow_GUI.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 

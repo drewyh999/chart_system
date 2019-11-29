@@ -8,9 +8,9 @@
 
 
 class Property : public QObject{
-   // Q_OBJECT
+    Q_OBJECT
 signals:
-    void ValueChanged(Property *prop){};//用于传输属性值改变的信号
+    void ValueChanged(Property *prop);//用于传输属性值改变的信号
 public slots:
     virtual void ShowSettingWindow(){};//用于接收调出设置窗口的信号的槽函数
 private slots:

@@ -7,11 +7,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/chart_system.dir/ChartRow.cpp.o"
   "CMakeFiles/chart_system.dir/Curve_Color.cpp.o"
   "CMakeFiles/chart_system.dir/DataProcessor.cpp.o"
+  "CMakeFiles/chart_system.dir/MainController.cpp.o"
   "CMakeFiles/chart_system.dir/MainWindow.cpp.o"
   "CMakeFiles/chart_system.dir/Property.cpp.o"
   "CMakeFiles/chart_system.dir/Scroll_Speed.cpp.o"
   "CMakeFiles/chart_system.dir/chart_system_autogen/mocs_compilation.cpp.o"
-  "CMakeFiles/chart_system.dir/test_ChartRow_GUI.cpp.o"
+  "CMakeFiles/chart_system.dir/main.cpp.o"
   "chart_system"
   "chart_system.pdb"
 )

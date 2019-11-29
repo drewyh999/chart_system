@@ -1,5 +1,5 @@
-#include "ChartRow.h"
-#include "DataProcessor.h"
+#include "../ChartRow.h"
+#include "../DataProcessor.h"
 
 
 

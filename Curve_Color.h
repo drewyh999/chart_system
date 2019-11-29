@@ -9,7 +9,7 @@
 #include "Property.h"
 
 class Curve_Color : public Property{
-//Q_OBJECT
+Q_OBJECT
 public:
     //定义通道颜色枚举
     enum C_COLOR{ RED = 0,BLUE,AQUA,GREEN,PURPLE };

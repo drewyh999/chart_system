@@ -15,7 +15,7 @@ signals:
 private :
     QList<short> data;
 public slots:
-    void Process(QString mode);//根据mode字符串来处理数据，处理完成之后通过信号DataChanged通知组件修改过后的数据
+    void Process(const QString &mode);//根据mode字符串来处理数据，处理完成之后通过信号DataChanged通知组件修改过后的数据
 public :
     DataProcessor(QList<short> data){  this -> data = data; }
     ~DataProcessor(){};

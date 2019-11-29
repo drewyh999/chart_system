@@ -9,11 +9,18 @@
 #include "Channel_Count.h"
 
 class ChartContainer :public QWidget{
+    Q_OBJECT
 private:
-    QList<ChartRow &> *ChartRows;
-    QVBoxLayout *vboxlayout;
+    QList<ChartRow *> *ChartRows;//Container中所存在的显示通道
+    QVBoxLayout *vboxlayout;//Container的布局
+    DataProcessor *dataProcessor;//用一个list来保存我们的dataprocessor，避免被垃圾回收
+    signals:
+        void ReQuestForChartRows(int);
 public:
-    explicit ChartContainer(ChartRow *cha);//保证每一个ChartContainer至少要有一个ChartRow才可以,从语法上保证
+    explicit ChartContainer(ChartRow *cha,DataProcessor *dataProcessor);//保证每一个ChartContainer至少要有一个ChartRow才可以,从语法上保证
+public slots:
+    void SetChannelCount(Property *cha);//用于接收通道数变化信号的函数
+    void AddChartRow(QList<ChartRow*> Rows);//用于接收新的ChartRow的函数
 };
 
 

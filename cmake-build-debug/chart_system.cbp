@@ -150,6 +150,12 @@
 		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/DataProcessor.h">
 			<Option target="chart_system"/>
 		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/MainController.cpp">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/MainController.h">
+			<Option target="chart_system"/>
+		</Unit>
 		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/MainWindow.cpp">
 			<Option target="chart_system"/>
 		</Unit>
@@ -171,7 +177,7 @@
 		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/chart_system_autogen/mocs_compilation.cpp">
 			<Option target="chart_system"/>
 		</Unit>
-		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/test_ChartRow_GUI.cpp">
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/main.cpp">
 			<Option target="chart_system"/>
 		</Unit>
 		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/CMakeLists.txt">

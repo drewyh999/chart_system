@@ -9,7 +9,7 @@
 #include "Property.h"
 
 class Channel_Count : public Property{
-   // Q_OBJECT
+    Q_OBJECT
 public :
     int M_Channels_Count;
     Channel_Count(int M_Channels_Count){ this -> label = "Channel_Count"; this -> M_Channels_Count = M_Channels_Count;};

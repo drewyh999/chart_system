@@ -16,7 +16,7 @@ find_package(Qt5 COMPONENTS Core Gui Charts REQUIRED)
 
 aux_source_directory(. MAIN_SRC)
 
-add_executable(chart_system  ${MAIN_SRC})
+add_executable(chart_system  ${MAIN_SRC} main.cpp)
 
 target_link_libraries(
         ${PROJECT_NAME}

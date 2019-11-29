@@ -168,12 +168,31 @@ void ChartRow::OnComboBoxChange(const QString &text) {
     emit(RequestForChange(text));
 }
 
-void ChartRow::SetScrollSpeed(Scroll_Speed *scrollSpeed) {
-    this -> scrollSpeed = (scrollSpeed -> M_Scroll_Speed);
+void ChartRow::SetScrollSpeed(Property *speed) {
+    this -> scrollSpeed = (dynamic_cast<Scroll_Speed*>(speed) -> M_Scroll_Speed);
 }
 
-void ChartRow::SetCurveColor(Curve_Color *curveColor) {
-
+void ChartRow::SetCurveColor(Property *curveColor) {
+    Curve_Color::C_COLOR color = dynamic_cast<Curve_Color*>(curveColor) -> M_Curve_Color;
+    QColor set_color;
+    switch(color){
+        case Curve_Color::RED:
+            set_color = QColor("red");
+            break;
+        case Curve_Color::AQUA:
+            set_color = QColor("aqua");
+            break;
+        case Curve_Color::PURPLE:
+            set_color = QColor("purple");
+            break;
+        case Curve_Color::BLUE:
+            set_color = QColor("blue");
+            break;
+        case Curve_Color::GREEN:
+            set_color = QColor("green");
+            break;
+    }
+    series -> setColor(set_color);
 }
 
 

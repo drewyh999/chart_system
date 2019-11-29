@@ -9,7 +9,7 @@
 #include "Property.h"
 
 class Scroll_Speed : public Property{
-//Q_OBJECT
+Q_OBJECT
 public :
     int M_Scroll_Speed;
     explicit Scroll_Speed(int M_Scroll_Speed){ this -> label = "Scroll_Speed"; this -> M_Scroll_Speed = M_Scroll_Speed;};

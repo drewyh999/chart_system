@@ -135,9 +135,22 @@ CMakeFiles/chart_system.dir/DataProcessor.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chart_system.dir/DataProcessor.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zhuyuanhao/CLionProjects/chart_system/DataProcessor.cpp -o CMakeFiles/chart_system.dir/DataProcessor.cpp.s
 
+CMakeFiles/chart_system.dir/MainController.cpp.o: CMakeFiles/chart_system.dir/flags.make
+CMakeFiles/chart_system.dir/MainController.cpp.o: ../MainController.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/chart_system.dir/MainController.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chart_system.dir/MainController.cpp.o -c /Users/zhuyuanhao/CLionProjects/chart_system/MainController.cpp
+
+CMakeFiles/chart_system.dir/MainController.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chart_system.dir/MainController.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zhuyuanhao/CLionProjects/chart_system/MainController.cpp > CMakeFiles/chart_system.dir/MainController.cpp.i
+
+CMakeFiles/chart_system.dir/MainController.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chart_system.dir/MainController.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zhuyuanhao/CLionProjects/chart_system/MainController.cpp -o CMakeFiles/chart_system.dir/MainController.cpp.s
+
 CMakeFiles/chart_system.dir/MainWindow.cpp.o: CMakeFiles/chart_system.dir/flags.make
 CMakeFiles/chart_system.dir/MainWindow.cpp.o: ../MainWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/chart_system.dir/MainWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/chart_system.dir/MainWindow.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chart_system.dir/MainWindow.cpp.o -c /Users/zhuyuanhao/CLionProjects/chart_system/MainWindow.cpp
 
 CMakeFiles/chart_system.dir/MainWindow.cpp.i: cmake_force
@@ -150,7 +163,7 @@ CMakeFiles/chart_system.dir/MainWindow.cpp.s: cmake_force
 
 CMakeFiles/chart_system.dir/Property.cpp.o: CMakeFiles/chart_system.dir/flags.make
 CMakeFiles/chart_system.dir/Property.cpp.o: ../Property.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/chart_system.dir/Property.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/chart_system.dir/Property.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chart_system.dir/Property.cpp.o -c /Users/zhuyuanhao/CLionProjects/chart_system/Property.cpp
 
 CMakeFiles/chart_system.dir/Property.cpp.i: cmake_force
@@ -163,7 +176,7 @@ CMakeFiles/chart_system.dir/Property.cpp.s: cmake_force
 
 CMakeFiles/chart_system.dir/Scroll_Speed.cpp.o: CMakeFiles/chart_system.dir/flags.make
 CMakeFiles/chart_system.dir/Scroll_Speed.cpp.o: ../Scroll_Speed.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/chart_system.dir/Scroll_Speed.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/chart_system.dir/Scroll_Speed.cpp.o"
 	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chart_system.dir/Scroll_Speed.cpp.o -c /Users/zhuyuanhao/CLionProjects/chart_system/Scroll_Speed.cpp
 
 CMakeFiles/chart_system.dir/Scroll_Speed.cpp.i: cmake_force
@@ -174,18 +187,18 @@ CMakeFiles/chart_system.dir/Scroll_Speed.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chart_system.dir/Scroll_Speed.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zhuyuanhao/CLionProjects/chart_system/Scroll_Speed.cpp -o CMakeFiles/chart_system.dir/Scroll_Speed.cpp.s
 
-CMakeFiles/chart_system.dir/test_ChartRow_GUI.cpp.o: CMakeFiles/chart_system.dir/flags.make
-CMakeFiles/chart_system.dir/test_ChartRow_GUI.cpp.o: ../test_ChartRow_GUI.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/chart_system.dir/test_ChartRow_GUI.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chart_system.dir/test_ChartRow_GUI.cpp.o -c /Users/zhuyuanhao/CLionProjects/chart_system/test_ChartRow_GUI.cpp
+CMakeFiles/chart_system.dir/main.cpp.o: CMakeFiles/chart_system.dir/flags.make
+CMakeFiles/chart_system.dir/main.cpp.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/chart_system.dir/main.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/chart_system.dir/main.cpp.o -c /Users/zhuyuanhao/CLionProjects/chart_system/main.cpp
 
-CMakeFiles/chart_system.dir/test_ChartRow_GUI.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chart_system.dir/test_ChartRow_GUI.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zhuyuanhao/CLionProjects/chart_system/test_ChartRow_GUI.cpp > CMakeFiles/chart_system.dir/test_ChartRow_GUI.cpp.i
+CMakeFiles/chart_system.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/chart_system.dir/main.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zhuyuanhao/CLionProjects/chart_system/main.cpp > CMakeFiles/chart_system.dir/main.cpp.i
 
-CMakeFiles/chart_system.dir/test_ChartRow_GUI.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chart_system.dir/test_ChartRow_GUI.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zhuyuanhao/CLionProjects/chart_system/test_ChartRow_GUI.cpp -o CMakeFiles/chart_system.dir/test_ChartRow_GUI.cpp.s
+CMakeFiles/chart_system.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/chart_system.dir/main.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zhuyuanhao/CLionProjects/chart_system/main.cpp -o CMakeFiles/chart_system.dir/main.cpp.s
 
 # Object files for target chart_system
 chart_system_OBJECTS = \
@@ -195,10 +208,11 @@ chart_system_OBJECTS = \
 "CMakeFiles/chart_system.dir/ChartRow.cpp.o" \
 "CMakeFiles/chart_system.dir/Curve_Color.cpp.o" \
 "CMakeFiles/chart_system.dir/DataProcessor.cpp.o" \
+"CMakeFiles/chart_system.dir/MainController.cpp.o" \
 "CMakeFiles/chart_system.dir/MainWindow.cpp.o" \
 "CMakeFiles/chart_system.dir/Property.cpp.o" \
 "CMakeFiles/chart_system.dir/Scroll_Speed.cpp.o" \
-"CMakeFiles/chart_system.dir/test_ChartRow_GUI.cpp.o"
+"CMakeFiles/chart_system.dir/main.cpp.o"
 
 # External object files for target chart_system
 chart_system_EXTERNAL_OBJECTS =
@@ -209,17 +223,18 @@ chart_system: CMakeFiles/chart_system.dir/ChartContainer.cpp.o
 chart_system: CMakeFiles/chart_system.dir/ChartRow.cpp.o
 chart_system: CMakeFiles/chart_system.dir/Curve_Color.cpp.o
 chart_system: CMakeFiles/chart_system.dir/DataProcessor.cpp.o
+chart_system: CMakeFiles/chart_system.dir/MainController.cpp.o
 chart_system: CMakeFiles/chart_system.dir/MainWindow.cpp.o
 chart_system: CMakeFiles/chart_system.dir/Property.cpp.o
 chart_system: CMakeFiles/chart_system.dir/Scroll_Speed.cpp.o
-chart_system: CMakeFiles/chart_system.dir/test_ChartRow_GUI.cpp.o
+chart_system: CMakeFiles/chart_system.dir/main.cpp.o
 chart_system: CMakeFiles/chart_system.dir/build.make
 chart_system: /usr/local/opt/qt/lib/QtCharts.framework/QtCharts
 chart_system: /usr/local/opt/qt/lib/QtWidgets.framework/QtWidgets
 chart_system: /usr/local/opt/qt/lib/QtGui.framework/QtGui
 chart_system: /usr/local/opt/qt/lib/QtCore.framework/QtCore
 chart_system: CMakeFiles/chart_system.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable chart_system"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable chart_system"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/chart_system.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

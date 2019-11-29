@@ -82,7 +82,7 @@ void DataProcessor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->DataChanged((*reinterpret_cast< const QList<short>(*)>(_a[1]))); break;
-        case 1: _t->Process((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 1: _t->Process((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {

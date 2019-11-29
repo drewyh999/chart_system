@@ -5,7 +5,7 @@
 #include "DataProcessor.h"
 
 
-void DataProcessor::Process(QString mode) {
+void DataProcessor::Process(const QString& mode) {
     DBGprint("Data received\n");
     emit(DataChanged(data));
 }
