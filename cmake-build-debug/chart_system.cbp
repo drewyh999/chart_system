@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="chart_system"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\opt\;CMake Files\..\..\..\..\usr\local\opt\qt\;CMake Files\..\..\..\..\usr\local\opt\qt\lib\;CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\;CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Core\;CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Widgets\;CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\;CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5OpenGL\;CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Xml\;CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Charts\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="chart_system">
+				<Option output="/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/chart_system" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_OPENGL_LIB"/>
+					<Add option="-DQT_XML_LIB"/>
+					<Add option="-DQT_CHARTS_LIB"/>
+					<Add directory="/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug"/>
+					<Add directory="/Users/zhuyuanhao/CLionProjects/chart_system"/>
+					<Add directory="/usr/local/opt/qt/lib/QtCore.framework"/>
+					<Add directory="/usr/local/opt/qt/lib/QtCore.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt/./mkspecs/macx-clang"/>
+					<Add directory="/usr/local/opt/qt/lib/QtWidgets.framework"/>
+					<Add directory="/usr/local/opt/qt/lib/QtWidgets.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt/lib/QtGui.framework"/>
+					<Add directory="/usr/local/opt/qt/lib/QtGui.framework/Headers"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt/lib/QtOpenGL.framework"/>
+					<Add directory="/usr/local/opt/qt/lib/QtOpenGL.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt/lib/QtXml.framework"/>
+					<Add directory="/usr/local/opt/qt/lib/QtXml.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt/lib/QtCharts.framework"/>
+					<Add directory="/usr/local/opt/qt/lib/QtCharts.framework/Headers"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 chart_system"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="chart_system/fast">
+				<Option output="/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/chart_system" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_OPENGL_LIB"/>
+					<Add option="-DQT_XML_LIB"/>
+					<Add option="-DQT_CHARTS_LIB"/>
+					<Add directory="/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug"/>
+					<Add directory="/Users/zhuyuanhao/CLionProjects/chart_system"/>
+					<Add directory="/usr/local/opt/qt/lib/QtCore.framework"/>
+					<Add directory="/usr/local/opt/qt/lib/QtCore.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt/./mkspecs/macx-clang"/>
+					<Add directory="/usr/local/opt/qt/lib/QtWidgets.framework"/>
+					<Add directory="/usr/local/opt/qt/lib/QtWidgets.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt/lib/QtGui.framework"/>
+					<Add directory="/usr/local/opt/qt/lib/QtGui.framework/Headers"/>
+					<Add directory="/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/OpenGL.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt/lib/QtOpenGL.framework"/>
+					<Add directory="/usr/local/opt/qt/lib/QtOpenGL.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt/lib/QtXml.framework"/>
+					<Add directory="/usr/local/opt/qt/lib/QtXml.framework/Headers"/>
+					<Add directory="/usr/local/opt/qt/lib/QtCharts.framework"/>
+					<Add directory="/usr/local/opt/qt/lib/QtCharts.framework/Headers"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 chart_system/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/Channel_Count.cpp">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/Channel_Count.h">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/ChartContainer.cpp">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/ChartContainer.h">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/ChartRow.cpp">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/ChartRow.h">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/Curve_Color.cpp">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/Curve_Color.h">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/DataProcessor.cpp">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/DataProcessor.h">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/MainWindow.cpp">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/MainWindow.h">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/Property.cpp">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/Property.h">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/Scroll_Speed.cpp">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/Scroll_Speed.h">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/test_ChartRow_GUI.cpp">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/ui_header.h">
+			<Option target="chart_system"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Widgets/Qt5Widgets_QMacStylePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5Gui_QCocoaIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5Gui_QMacHeifPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5Gui_QMacJp2Plugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5Gui_QWebGLIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5OpenGL/Qt5OpenGLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5OpenGL\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5OpenGL/Qt5OpenGLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5OpenGL\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Xml/Qt5XmlConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Xml\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Xml/Qt5XmlConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Xml\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Charts/Qt5ChartsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Charts\"/>
+		</Unit>
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/../../../../usr/local/opt/qt/lib/cmake/Qt5Charts/Qt5ChartsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\opt\qt\lib\cmake\Qt5Charts\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
