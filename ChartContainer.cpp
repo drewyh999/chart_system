@@ -26,7 +26,7 @@ void ChartContainer::SetChannelCount(Property * cha) {
     //如果要设置的通道数比当前值小，那么我们减少布局中的通道显示
     else if(current_count > required_count){
         auto vboxlayout = this -> layout();
-            for (int i = current_count ; i >= required_count; i--) {//这里从current
+            for (int i = current_count ; i > required_count; i--) {//这里从current
                 QLayoutItem *it = vboxlayout -> layout() -> takeAt(i);
                 auto row = qobject_cast<ChartRow*>(it -> widget());
                 delete row;
@@ -47,7 +47,7 @@ ChartContainer::ChartContainer(ChartRow *cha,DataProcessor *dataProcessor) {
     vboxlayout -> addStretch();
     vboxlayout -> addWidget(cha);//在布局中加入ChartRow
     vboxlayout -> setDirection(QBoxLayout::BottomToTop);
-    vboxlayout -> addSpacing(CHART_ROW_PADDING);
+   // vboxlayout -> addSpacing(CHART_ROW_PADDING);
 
     //让dataprocessor来发出一次处理信号，通知Chartrow绘制曲线
     dataProcessor -> Process("原始");

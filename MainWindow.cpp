@@ -15,6 +15,7 @@ void MainWindow::AddPropertySettings(QList<Property *> props) {
     }
     menubar -> addMenu(setting_menu);
 }
+
 void MainWindow::closeEvent(QCloseEvent *event)  {
     emit(WindowClosing());
 }
