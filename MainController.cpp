@@ -34,11 +34,16 @@ void MainController::NewFile() {
     connect(NewContainer,&ChartContainer::ReQuestForChartRows,this,&MainController::HandleNewChartRowReQuest);
     connect(this,&MainController::NewChartRowGenerated,NewContainer,&ChartContainer::AddChartRow);
 
-    //让Container自行调整通道数量
-    NewContainer -> SetChannelCount(channelCount);
+    //根据设置,通知组件进行相应调整
+    emit(curveColor -> ValueChanged(curveColor));
+    emit(scrollSpeed -> ValueChanged(scrollSpeed));
+    emit(channelCount -> ValueChanged(channelCount));
 
     //将Container添加到主窗口的Tab中去
     mainWindow -> AddTab(NewContainer,filepath);
+
+    //设置主窗口的初始大小为当前设置通道数的大小
+    mainWindow -> resize(CHARTROW_WIDTH,channelCount -> M_Channels_Count * (CHARTROW_HEIGHT + 40));
 }
 
 ChartRow *MainController::InitNewChartRow() {
@@ -55,15 +60,66 @@ void MainController::OnClosing() {
 }
 
 void MainController::WriteConfig() {
-    //TODO Writeconfig
+    auto file = new QFile("./chart_config.config");
+    file -> open(QIODevice::ReadWrite);
+    QString channelcount_text("Channel_Count:" + QString::number(channelCount -> M_Channels_Count));
+    QString curvecolor_text("Curve_Color:" + QString::number(curveColor -> M_Curve_Color));
+    QString scrollspeed_text("Scroll_Speed:" + QString::number(scrollSpeed -> M_Scroll_Speed));
+    file -> write(channelcount_text.toUtf8());
+    file -> write("\n");
+    file -> write(curvecolor_text.toUtf8());
+    file -> write("\n");
+    file -> write(scrollspeed_text.toUtf8());
+    file -> write("\n");
+    file -> close();
 }
 
 void MainController::ReadConfig() {
-    auto file = new QFile("./chart_config");
+    auto file = new QFile("./chart_config.config");
+
+    //如果配置文件不存在，那么我们直接给出默认的配置
     if(!file -> exists()){
        scrollSpeed = new Scroll_Speed(10);
        curveColor = new Curve_Color(Curve_Color::RED);
-       channelCount = new Channel_Count(3);
+       channelCount = new Channel_Count(1);
+    }
+
+    //如果有配置文件,那么我们对于配置文件进行读取
+    else{
+        file -> open(QIODevice::ReadOnly);
+        while (!file -> atEnd())
+        {
+            QByteArray fileline = file -> readLine();
+            QString str(fileline);
+            DBGprint("Reading a line of %d\n",str.length());
+
+            /* 配置文件的格式为 [PropertyName]:[Value]*/
+
+            auto line = str.split(":");
+            if(line.length() != 2){
+                //如果配置文件损坏那么我们给初始化一个默认的属性
+                QMessageBox::warning(mainWindow,"Warning","配置文件损坏");
+                scrollSpeed = new Scroll_Speed(10);
+                curveColor = new Curve_Color(Curve_Color::RED);
+                channelCount = new Channel_Count(1);
+                return;
+            }
+            //读取通道数信息
+            if(line.at(0) == "Channel_Count"){
+                channelCount = new Channel_Count(line.at(1).toInt());
+            }
+
+            //读取曲线颜色信息
+            else if(line.at(0) == "Curve_Color"){
+                curveColor = new Curve_Color((Curve_Color::C_COLOR)(line.at(1).toInt()));
+            }
+
+            //读取滚动速度信息
+            if(line.at(0) == "Scroll_Speed"){
+                scrollSpeed = new Scroll_Speed(line.at(1).toInt());
+            }
+        }
+        file -> close();
     }
 }
 
@@ -92,10 +148,11 @@ MainController::MainController() {
 }
 
 void MainController::ShowMainWindow() {
-    mainWindow -> resize(960,960);
-    mainWindow -> show();
+        mainWindow -> show();
 }
 
+
+//按照请求初始化一些chartrow然后发送给container
 void MainController::HandleNewChartRowReQuest(int count) {
     QList<ChartRow*> list;
     for(int i = 0;i < count;i ++){

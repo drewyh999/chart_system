@@ -26,7 +26,7 @@ void ChartContainer::SetChannelCount(Property * cha) {
     //如果要设置的通道数比当前值小，那么我们减少布局中的通道显示
     else if(current_count > required_count){
         auto vboxlayout = this -> layout();
-            for (int i = current_count ; i > required_count; i--) {//这里从current
+            for (int i = current_count ; i > required_count; i--) {//这里从current_count开始是因为布局中第0个widget是一个strech，他来保证我们的表格是从上往下摆列的，所以我们的chartrow是从第1个元素开始的
                 QLayoutItem *it = vboxlayout -> layout() -> takeAt(i);
                 auto row = qobject_cast<ChartRow*>(it -> widget());
                 delete row;

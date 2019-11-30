@@ -24,8 +24,18 @@ MainWindow::MainWindow() {
     //初始化tab
     tab = new QTabWidget;
 
-    //设置tab的最大大小可以足够容纳所有通道
-    tab -> setMaximumHeight(MAX_CHANNEL_COUNT * (2 * CHART_ROW_PADDING + CHARTROW_HEIGHT));
+    //设置tab的最小大小可以足够容纳所有通道
+    tab -> setMinimumHeight(MAX_CHANNEL_COUNT * (CHARTROW_HEIGHT));
+
+    //设置欢迎标签
+    auto welcomelabel = new QLabel("请选择文件");
+    welcomelabel -> setMargin(200);
+    auto font = welcomelabel -> font();
+    font.setPointSize(40);
+    welcomelabel -> setFont(font);
+
+    //将欢迎设置为当前的中央widget
+    this -> setCentralWidget(dynamic_cast<QWidget*>(welcomelabel));
 }
 
 void MainWindow::AddTab(ChartContainer *CC,const QString& filename) {

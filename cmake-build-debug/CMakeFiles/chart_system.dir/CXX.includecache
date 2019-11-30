@@ -6,21 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/zhuyuanhao/CLionProjects/chart_system/Channel_Count.h
-Property.h
-/Users/zhuyuanhao/CLionProjects/chart_system/Property.h
-
-/Users/zhuyuanhao/CLionProjects/chart_system/ChartContainer.cpp
-ChartContainer.h
-/Users/zhuyuanhao/CLionProjects/chart_system/ChartContainer.h
-
-/Users/zhuyuanhao/CLionProjects/chart_system/ChartContainer.h
-ui_header.h
-/Users/zhuyuanhao/CLionProjects/chart_system/ui_header.h
+/Users/zhuyuanhao/CLionProjects/chart_system/ChartRow.cpp
 ChartRow.h
 /Users/zhuyuanhao/CLionProjects/chart_system/ChartRow.h
-Channel_Count.h
-/Users/zhuyuanhao/CLionProjects/chart_system/Channel_Count.h
 
 /Users/zhuyuanhao/CLionProjects/chart_system/ChartRow.h
 ui_header.h
