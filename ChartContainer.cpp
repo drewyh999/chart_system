@@ -5,50 +5,78 @@
 #include "ChartContainer.h"
 
 void ChartContainer::SetChannelCount(Property * cha) {
-    int current_count = ChartRows -> size();
-    int required_count = dynamic_cast<Channel_Count*>(cha) -> M_Channels_Count;
+    auto chartRows = this -> findChildren<ChartRow*>();
+//    auto oldchildren = this -> findChildren<ChartRow*>();
+    int current_count = chartRows.length();
 
-    if(ChartRows->length() == required_count)
+    int required_count = dynamic_cast<Channel_Count*>(cha) -> M_Channels_Count;//获取我们需要设置的通道数
+
+//    如果我们要设置的值就是当前的值或者说当前还没有chartrow存在与container中，那么我们直接返回
+    if(chartRows.length() == required_count || current_count == 0)
         return;
 
-    //如果要设置的通道数比当前小，那么我们减少ChartRows中的项目数，反之我们增加
+
+    //如果要设置的通道数比当前大，那么我们增加
     if(current_count < required_count){
         //这里我们通过向maincontroller发送一个需要的通道数的信号,然后由MainController来进行新的charrow初始化（进行属性链接）再交给container加入
         emit(ReQuestForChartRows(required_count - current_count));
         return;
     }
+
+    //如果要设置的通道数比当前值小，那么我们减少布局中的通道显示
     else if(current_count > required_count){
-        for(auto i = 0;i < current_count - required_count;i ++){
-            ChartRows -> removeFirst();
-        }
+        auto vboxlayout = this -> layout();
+            for (int i = current_count ; i >= required_count; i--) {//这里从current
+                QLayoutItem *it = vboxlayout -> layout() -> takeAt(i);
+                auto row = qobject_cast<ChartRow*>(it -> widget());
+                delete row;
+                DBGprint("channel setting value %d\n", i);
+            }
+            this -> resize(this -> width(), (CHARTROW_HEIGHT + 2 * CHART_ROW_PADDING) * required_count);
     }
-    //重新给布局分配一次内存空间
-    vboxlayout = new QVBoxLayout;
-    //将现在的ChartRow加入到布局当中去
-    for(auto row : *ChartRows){
-        vboxlayout -> addWidget(row);
-    }
-    this -> setLayout(vboxlayout);
 }
 
 
 ChartContainer::ChartContainer(ChartRow *cha,DataProcessor *dataProcessor) {
     //链接dataprocessor到chartrow
+    connect(cha,&ChartRow::RequestForChange,dataProcessor,&DataProcessor::Process);
+    connect( dataProcessor,&DataProcessor::DataChanged,cha,&ChartRow::RePlot);
+
+    //初始化布局
+    auto vboxlayout = new QVBoxLayout;
+    vboxlayout -> addStretch();
+    vboxlayout -> addWidget(cha);//在布局中加入ChartRow
+    vboxlayout -> setDirection(QBoxLayout::BottomToTop);
+    vboxlayout -> addSpacing(CHART_ROW_PADDING);
+
+    //让dataprocessor来发出一次处理信号，通知Chartrow绘制曲线
+    dataProcessor -> Process("原始");
+
+    //将这个处理器初始化为他
     this -> dataProcessor = dataProcessor;
-    connect(cha,&ChartRow::RequestForChange,this -> dataProcessor,&DataProcessor::Process);
-    connect(this -> dataProcessor,&DataProcessor::DataChanged,cha,&ChartRow::RePlot);
-    vboxlayout = new QVBoxLayout;
-    vboxlayout -> addWidget(cha);
-    ChartRows -> append(cha);
+
+    //设置布局
     this -> setLayout(vboxlayout);
+
+    //设置组件的最大size和最小size
+    this -> setMaximumHeight(MAX_CHANNEL_COUNT * (2 * CHART_ROW_PADDING + CHARTROW_HEIGHT));
+    this -> setMinimumHeight((2 * CHART_ROW_PADDING + CHARTROW_HEIGHT));
+
+
 }
 
 void ChartContainer::AddChartRow(QList<ChartRow *> Rows) {
+    auto vboxlayout  = this -> layout();
+    auto chartRows = this -> findChildren<ChartRow*>();
+
+    DBGprint("Current layout items count is %d\n",chartRows . length());
     for(auto row : Rows){
-            ChartRows -> append(row);//首先将其加入ChartRow的list
+            vboxlayout -> addWidget(row);
             //将chartrow链接到处理器对象
-            connect(row,&ChartRow::RequestForChange,this -> dataProcessor,&DataProcessor::Process);
-            connect(this -> dataProcessor,&DataProcessor::DataChanged,row,&ChartRow::RePlot);
+            auto dp = new DataProcessor(dataProcessor->GetData());
+            connect(row,&ChartRow::RequestForChange,dp,&DataProcessor::Process);
+            connect(dp,&DataProcessor::DataChanged,row,&ChartRow::RePlot);
+            dp -> Process("原始");
     }
 }
 

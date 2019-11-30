@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="chart_system" targetName="chart_system_autogen" />
       <config projectName="chart_system" targetName="chart_system" />
+      <config projectName="chart_system" targetName="chart_system_autogen" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -144,7 +144,7 @@
       <workItem from="1574919083450" duration="10139000" />
       <workItem from="1574948524778" duration="10780000" />
       <workItem from="1574995308428" duration="22455000" />
-      <workItem from="1575028867443" duration="5054000" />
+      <workItem from="1575028867443" duration="22025000" />
     </task>
     <servers />
   </component>
@@ -171,11 +171,24 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/MainWindow.cpp</url>
-          <line>7</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/DataProcessor.cpp</url>
+          <line>15</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/ChartContainer.cpp</url>
+          <line>27</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="data" language="ObjectiveC" />
+        <watch expression="data.at(0)" language="ObjectiveC" />
+        <watch expression="chartRows.at(0)" language="ObjectiveC" />
+        <watch expression="chartRows.at(1)" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

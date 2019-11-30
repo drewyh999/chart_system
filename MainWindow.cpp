@@ -3,7 +3,7 @@
 #include <string>
 
 //将属性设置加入到菜单当中去
-class MainController;
+
 void MainWindow::AddPropertySettings(QList<Property *> props) {
     auto menubar = this -> menuBar();
     auto setting_menu = new QMenu("Settings");
@@ -20,14 +20,19 @@ void MainWindow::closeEvent(QCloseEvent *event)  {
 }
 
 MainWindow::MainWindow() {
-
-    //设置中央Widget为Tab
+    //初始化tab
     tab = new QTabWidget;
-    this -> setCentralWidget(tab);
+
+    //设置tab的最大大小可以足够容纳所有通道
+    tab -> setMaximumHeight(MAX_CHANNEL_COUNT * (2 * CHART_ROW_PADDING + CHARTROW_HEIGHT));
 }
 
 void MainWindow::AddTab(ChartContainer *CC,const QString& filename) {
     this -> tab -> addTab(CC,filename);
+    //设置为可以滚动
+    QScrollArea *s = new QScrollArea(this);
+    s -> setWidget(tab);
+    this -> setCentralWidget(s);
 }
 
 

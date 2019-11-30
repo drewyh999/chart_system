@@ -11,9 +11,8 @@
 class ChartContainer :public QWidget{
     Q_OBJECT
 private:
-    QList<ChartRow *> *ChartRows;//Container中所存在的显示通道
-    QVBoxLayout *vboxlayout;//Container的布局
-    DataProcessor *dataProcessor;//用一个list来保存我们的dataprocessor，避免被垃圾回收
+   // QList<ChartRow *> *chartRows;//Container中所存在的显示通道
+    DataProcessor *dataProcessor;//用于给其他通道的dataprocessor//TODO Maybe we can just remove it? and hand over the job to main controller
     signals:
         void ReQuestForChartRows(int);
 public:

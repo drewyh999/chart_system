@@ -10,7 +10,11 @@
 #include "Curve_Color.h"
 #include "Scroll_Speed.h"
 #include "DataProcessor.h"
-
+#define COMBOBOX_WIDTH 100
+#define COMBOBOX_HEIGHT 100
+#define CHARTROW_WIDTH 900
+#define CHARTROW_HEIGHT 400
+#define CHART_ROW_PADDING 30
 
 class ChartRow : public QWidget{
     Q_OBJECT

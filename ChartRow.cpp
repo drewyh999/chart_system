@@ -63,7 +63,9 @@ ChartRow::ChartRow() {
     comboBox -> addItem("微分");
     comboBox -> addItem("积分");
     comboBox -> addItem("原始");
-    comboBox -> setFixedSize(100,100);
+    comboBox -> addItem("绝对值");
+    comboBox -> setCurrentIndex(2);//设置当前选择"原始"
+    comboBox -> setFixedSize(COMBOBOX_WIDTH,COMBOBOX_HEIGHT);
 
     //链接combobox选项变化信号到请求更改数据函数
     connect(comboBox,&QComboBox::currentTextChanged,this,&ChartRow::OnComboBoxChange);
@@ -80,7 +82,8 @@ ChartRow::ChartRow() {
 
     //将组合好的组件放置到行中去
     this -> setLayout(vertical_layout);
-    this -> setFixedSize(900,400);
+    this -> setFixedSize(CHARTROW_WIDTH,CHARTROW_HEIGHT);
+    //this -> setContentsMargins(CHART_ROW_PADDING,CHART_ROW_PADDING,CHART_ROW_PADDING,CHART_ROW_PADDING);
 
 }
 

@@ -6,7 +6,7 @@
 
 void MainController::NewFile() {
     //首先用filedialog获取文件的地址
-    QString filepath = QFileDialog::getOpenFileName(mainWindow, tr("Open file"), ".", tr("All files"));
+    QString filepath = QFileDialog::getOpenFileName(mainWindow, tr("Open file"), ".", tr("All files(*)"));
     auto file = new QFile(filepath);
 
     //如果文件没有读权限，那么报错
@@ -25,7 +25,9 @@ void MainController::NewFile() {
     }
 
     //创建一个新的container，用于装新的表格数据，由于每一个container里面至少有一个chart，所以我们先传入一个
-    auto NewContainer = new ChartContainer(new ChartRow,new DataProcessor(data));
+    auto processor = new DataProcessor(data);
+    auto cr = InitNewChartRow();
+    auto NewContainer = new ChartContainer(cr,processor);
 
     //链接新的container到SetChannel属性以及主控制器
     connect(channelCount,&Property::ValueChanged,NewContainer,&ChartContainer::SetChannelCount);
