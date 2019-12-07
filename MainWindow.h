@@ -8,6 +8,8 @@
 #include "ui_header.h"
 #include "Property.h"
 #include "ChartContainer.h"
+#define WELCOME_LABEL_MARGIN 200
+#define WELCOME_LABEL_FONT_SIZE 40
 class MainController;
 
 

@@ -5,8 +5,6 @@
 #include "ChartRow.h"
 
 ChartRow::ChartRow() {
-    //初始化一个scrollSpeed
-    this -> scrollSpeed = 20;
 
     //初始化isScrollling
     this -> isScrolling = false;
@@ -25,7 +23,7 @@ ChartRow::ChartRow() {
     //根据Qt需要用ChartView容纳Chart
     auto chartView = new QChartView(Cchart);
     //设置rubberBand使得chart具有缩放功能
-    chartView -> setRubberBand(QChartView::RectangleRubberBand);
+//    chartView -> setRubberBand(QChartView::RectangleRubberBand);
     chartView -> setRenderHint(QPainter::Antialiasing);
 
 
@@ -60,22 +58,43 @@ ChartRow::ChartRow() {
 
     //初始化combobox
     comboBox = new QComboBox;
+    comboBox -> addItem("原始");
     comboBox -> addItem("微分");
     comboBox -> addItem("积分");
-    comboBox -> addItem("原始");
     comboBox -> addItem("绝对值");
-    comboBox -> setCurrentIndex(2);//设置当前选择"原始"
     comboBox -> setFixedSize(COMBOBOX_WIDTH,COMBOBOX_HEIGHT);
 
     //链接combobox选项变化信号到请求更改数据函数
     connect(comboBox,&QComboBox::currentTextChanged,this,&ChartRow::OnComboBoxChange);
+
+    //缩放XY轴的slider
+    XSlider = new QSlider;
+    XSlider -> setRange(SLIDER_MIN_PERCENT,SLIDER_MAX_PERCENT);
+    XSlider -> setValue(SLIDER_MAX_PERCENT);
+    YSlider = new QSlider;
+    YSlider -> setRange(SLIDER_MIN_PERCENT,SLIDER_MAX_PERCENT);
+    YSlider -> setValue(SLIDER_MAX_PERCENT);
+
+    //链接Slider
+    connect(XSlider,&QSlider::valueChanged,this,&ChartRow::SetXScale);
+    connect(YSlider,&QSlider::valueChanged,this,&ChartRow::SetYScale);
 
 
     //将组建组合在一起
     auto horizontal_layout = new QHBoxLayout;
     horizontal_layout -> addWidget(YScrollBar);
     horizontal_layout -> addWidget(chartView);
-    horizontal_layout -> addWidget(comboBox);
+
+    auto manu_panel = new QVBoxLayout;//右侧的操作拦
+    manu_panel -> addWidget(comboBox);
+
+    auto sliders = new QHBoxLayout;//两个slider
+    sliders -> addWidget(XSlider);
+    sliders -> addWidget(YSlider);
+
+    manu_panel -> addLayout(sliders);
+    horizontal_layout -> addLayout(manu_panel);
+
     auto vertical_layout = new QVBoxLayout;
     vertical_layout -> addLayout(horizontal_layout);
     vertical_layout -> addWidget(XScrollBar);
@@ -87,16 +106,20 @@ ChartRow::ChartRow() {
 
 }
 
-void ChartRow::RePlot(const QList<short>& chartData){
+void ChartRow::RePlot(const QVector<short>& chartData){
     Cchart -> removeAllSeries();
     series = new QLineSeries();
     series -> setVisible(true);
-    for(int i = 0;i < chartData.length();i ++){
-        series -> append(i, chartData.at(i));
+    series -> setUseOpenGL(true);
+    int length = chartData.length();
+    for(int i = 0;i < length;i ++){
+        short temp = chartData.at(i);
+        series -> append(i, temp);
     }
     Cchart -> addSeries(series);
     series -> attachAxis(XAxis);
     series -> attachAxis(YAxis);
+    DBGprint("Plot completed");
 }
 
 void ChartRow::OnYAxisRangeChange(qreal min, qreal max) {
@@ -127,7 +150,7 @@ void ChartRow::OnXAxisRangeChange(qreal min, qreal max) {
     if (isScrolling) return;
 
     //如果轴的变化范围超过我们的最大范围，那么把它重制到最大范围
-    if(min < 0 || max > series -> at(series -> count() - 1).x()){
+    if(min < 0 || max >= series -> count() - 1){
         XAxis -> setRange(0,series -> at(series -> count() - 1).x());
         //让滚动条恢复原状
         XScrollBar -> setMaximum(0);
@@ -140,7 +163,7 @@ void ChartRow::OnXAxisRangeChange(qreal min, qreal max) {
     isScrolling = true;
     XScrollBar -> setMaximum(  100 * (int)(all_width -  visible_width));//滚动条的最大值是全长减去可见长度(由于范围是个浮点数，而滚动条value只能是整数，所以我们扩大100倍尽量获得精确的值)
     XScrollValue =  100 * (((min)/all_width)  *(all_width - visible_width));//设置新的滚动条值，并且也扩大100倍，以获得相同比例
-    XScrollBar->setValue(XScrollValue);
+    XScrollBar -> setValue(XScrollValue);
     isScrolling = false;
 }
 
@@ -196,6 +219,21 @@ void ChartRow::SetCurveColor(Property *curveColor) {
     }
     series -> setColor(set_color);
 }
+
+void ChartRow::SetXScale(int value) {
+    if(value != 0) {
+        auto min = this->XAxis->min();
+        this->XAxis->setRange(min,((qreal)value / SLIDER_MAX_PERCENT) * ((this -> series -> count() - 1)) + min);
+    }
+}
+
+void ChartRow::SetYScale(int value) {
+    if(value != 0) {
+        this->YAxis->setRange(SHRT_MIN * ((qreal)value / SLIDER_MAX_PERCENT),SHRT_MAX * ((qreal)value / SLIDER_MAX_PERCENT));
+    }
+}
+
+
 
 
 

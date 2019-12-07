@@ -14,7 +14,7 @@ void MainController::NewFile() {
         QMessageBox::warning(mainWindow,"Warning","无法打开文件");
         return;
     }
-    QList<short> data;
+    QVector<short> data;
 
     //使用数据流读入数据
     QDataStream input(file);
@@ -24,7 +24,7 @@ void MainController::NewFile() {
         data.append(temp);
     }
 
-    //创建一个新的container，用于装新的表格数据，由于每一个container里面至少有一个chart，所以我们先传入一个
+    //创建一个新的container，以及新的dataprocessor用于装新的表格数据，由于每一个container里面至少有一个chart，所以我们先传入一个
     auto processor = new DataProcessor(data);
     auto cr = InitNewChartRow();
     auto NewContainer = new ChartContainer(cr,processor);
@@ -43,7 +43,7 @@ void MainController::NewFile() {
     mainWindow -> AddTab(NewContainer,filepath);
 
     //设置主窗口的初始大小为当前设置通道数的大小
-    mainWindow -> resize(CHARTROW_WIDTH,channelCount -> M_Channels_Count * (CHARTROW_HEIGHT + 40));
+    mainWindow -> resize(CHARTROW_WIDTH + CHARTROW_EXTRA_PADDING,channelCount -> M_Channels_Count * (CHARTROW_HEIGHT + CHARTROW_EXTRA_PADDING));
 }
 
 ChartRow *MainController::InitNewChartRow() {
@@ -79,9 +79,9 @@ void MainController::ReadConfig() {
 
     //如果配置文件不存在，那么我们直接给出默认的配置
     if(!file -> exists()){
-       scrollSpeed = new Scroll_Speed(10);
-       curveColor = new Curve_Color(Curve_Color::RED);
-       channelCount = new Channel_Count(1);
+       scrollSpeed = new Scroll_Speed(DEFAULT_SCROLLING_SPEED);
+       curveColor = new Curve_Color((Curve_Color::C_COLOR)DEFAULT_CURVE_COLOR);
+       channelCount = new Channel_Count(DEFAULT_CHANNEL_COUNT);
     }
 
     //如果有配置文件,那么我们对于配置文件进行读取
@@ -96,27 +96,27 @@ void MainController::ReadConfig() {
             /* 配置文件的格式为 [PropertyName]:[Value]*/
 
             auto line = str.split(":");
-            if(line.length() != 2){
+            if(line.length() != CONFIG_ITEM_LENTH){
                 //如果配置文件损坏那么我们给初始化一个默认的属性
                 QMessageBox::warning(mainWindow,"Warning","配置文件损坏");
-                scrollSpeed = new Scroll_Speed(10);
-                curveColor = new Curve_Color(Curve_Color::RED);
-                channelCount = new Channel_Count(1);
+                scrollSpeed = new Scroll_Speed(DEFAULT_SCROLLING_SPEED);
+                curveColor = new Curve_Color((Curve_Color::C_COLOR)DEFAULT_CURVE_COLOR);
+                channelCount = new Channel_Count(DEFAULT_CHANNEL_COUNT);
                 return;
             }
             //读取通道数信息
-            if(line.at(0) == "Channel_Count"){
-                channelCount = new Channel_Count(line.at(1).toInt());
+            if(line.at(CONFIG_ITEM_INDEX) == "Channel_Count"){
+                channelCount = new Channel_Count(line.at(CONFIG_VALUE_INDEX).toInt());
             }
 
             //读取曲线颜色信息
-            else if(line.at(0) == "Curve_Color"){
-                curveColor = new Curve_Color((Curve_Color::C_COLOR)(line.at(1).toInt()));
+            else if(line.at(CONFIG_ITEM_INDEX) == "Curve_Color"){
+                curveColor = new Curve_Color((Curve_Color::C_COLOR)(line.at(CONFIG_VALUE_INDEX).toInt()));
             }
 
             //读取滚动速度信息
-            if(line.at(0) == "Scroll_Speed"){
-                scrollSpeed = new Scroll_Speed(line.at(1).toInt());
+            if(line.at(CONFIG_ITEM_INDEX) == "Scroll_Speed"){
+                scrollSpeed = new Scroll_Speed(line.at(CONFIG_VALUE_INDEX).toInt());
             }
         }
         file -> close();

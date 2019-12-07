@@ -9,6 +9,12 @@
 #include <QObject>
 #include "Property.h"
 #include "MainWindow.h"
+#define DEFAULT_SCROLLING_SPEED 10
+#define DEFAULT_CURVE_COLOR 1
+#define DEFAULT_CHANNEL_COUNT 3
+#define CONFIG_ITEM_LENTH 2
+#define CONFIG_ITEM_INDEX 0
+#define CONFIG_VALUE_INDEX 1
 
 class MainController : public QObject{
 Q_OBJECT

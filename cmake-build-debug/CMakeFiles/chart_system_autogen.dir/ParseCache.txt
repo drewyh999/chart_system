@@ -3,8 +3,8 @@
 /Users/zhuyuanhao/CLionProjects/chart_system/Scroll_Speed.cpp
 /Users/zhuyuanhao/CLionProjects/chart_system/ChartContainer.cpp
 /Users/zhuyuanhao/CLionProjects/chart_system/main.cpp
-/Users/zhuyuanhao/CLionProjects/chart_system/Property.cpp
 /Users/zhuyuanhao/CLionProjects/chart_system/MainWindow.cpp
+/Users/zhuyuanhao/CLionProjects/chart_system/Property.cpp
 /Users/zhuyuanhao/CLionProjects/chart_system/Scroll_Speed.h
  mmc:Q_OBJECT
 /Users/zhuyuanhao/CLionProjects/chart_system/ChartRow.h
@@ -16,9 +16,9 @@
 /Users/zhuyuanhao/CLionProjects/chart_system/Channel_Count.cpp
 /Users/zhuyuanhao/CLionProjects/chart_system/DataProcessor.h
  mmc:Q_OBJECT
-/Users/zhuyuanhao/CLionProjects/chart_system/DataProcessor.cpp
 /Users/zhuyuanhao/CLionProjects/chart_system/Curve_Color.h
  mmc:Q_OBJECT
+/Users/zhuyuanhao/CLionProjects/chart_system/DataProcessor.cpp
 /Users/zhuyuanhao/CLionProjects/chart_system/Property.h
  mmc:Q_OBJECT
 /Users/zhuyuanhao/CLionProjects/chart_system/MainWindow.h

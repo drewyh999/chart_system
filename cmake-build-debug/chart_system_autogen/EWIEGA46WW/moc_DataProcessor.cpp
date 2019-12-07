@@ -10,7 +10,7 @@
 #include "../../../DataProcessor.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
-#include <QtCore/QList>
+#include <QtCore/QVector>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'DataProcessor.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
@@ -24,7 +24,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_DataProcessor_t {
     QByteArrayData data[7];
-    char stringdata0[58];
+    char stringdata0[60];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -36,13 +36,13 @@ static const qt_meta_stringdata_DataProcessor_t qt_meta_stringdata_DataProcessor
 QT_MOC_LITERAL(0, 0, 13), // "DataProcessor"
 QT_MOC_LITERAL(1, 14, 11), // "DataChanged"
 QT_MOC_LITERAL(2, 26, 0), // ""
-QT_MOC_LITERAL(3, 27, 12), // "QList<short>"
-QT_MOC_LITERAL(4, 40, 4), // "data"
-QT_MOC_LITERAL(5, 45, 7), // "Process"
-QT_MOC_LITERAL(6, 53, 4) // "mode"
+QT_MOC_LITERAL(3, 27, 14), // "QVector<short>"
+QT_MOC_LITERAL(4, 42, 4), // "data"
+QT_MOC_LITERAL(5, 47, 7), // "Process"
+QT_MOC_LITERAL(6, 55, 4) // "mode"
 
     },
-    "DataProcessor\0DataChanged\0\0QList<short>\0"
+    "DataProcessor\0DataChanged\0\0QVector<short>\0"
     "data\0Process\0mode"
 };
 #undef QT_MOC_LITERAL
@@ -81,7 +81,7 @@ void DataProcessor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         auto *_t = static_cast<DataProcessor *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->DataChanged((*reinterpret_cast< const QList<short>(*)>(_a[1]))); break;
+        case 0: _t->DataChanged((*reinterpret_cast< const QVector<short>(*)>(_a[1]))); break;
         case 1: _t->Process((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         default: ;
         }
@@ -92,14 +92,14 @@ void DataProcessor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<int*>(_a[0]) = -1; break;
             case 0:
-                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QList<short> >(); break;
+                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QVector<short> >(); break;
             }
             break;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (DataProcessor::*)(const QList<short> & );
+            using _t = void (DataProcessor::*)(const QVector<short> & );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&DataProcessor::DataChanged)) {
                 *result = 0;
                 return;
@@ -149,7 +149,7 @@ int DataProcessor::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void DataProcessor::DataChanged(const QList<short> & _t1)
+void DataProcessor::DataChanged(const QVector<short> & _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);

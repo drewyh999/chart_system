@@ -39,8 +39,6 @@ using namespace QtCharts;
 #endif
 //最大可以拥有的通道数目
 #define MAX_CHANNEL_COUNT 5
-//定义最多可以打开的文件数目
-#define MAX_FILE_OPENED 3
 
 
 

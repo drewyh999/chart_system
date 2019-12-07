@@ -29,9 +29,9 @@ MainWindow::MainWindow() {
 
     //设置欢迎标签
     auto welcomelabel = new QLabel("请选择文件");
-    welcomelabel -> setMargin(200);
+    welcomelabel -> setMargin(WELCOME_LABEL_MARGIN);
     auto font = welcomelabel -> font();
-    font.setPointSize(40);
+    font.setPointSize(WELCOME_LABEL_FONT_SIZE);
     welcomelabel -> setFont(font);
 
     //将欢迎设置为当前的中央widget

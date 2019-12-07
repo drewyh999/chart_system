@@ -32,7 +32,7 @@ void ChartContainer::SetChannelCount(Property * cha) {
                 delete row;
                 DBGprint("channel setting value %d\n", i);
             }
-            this -> resize(this -> width(), (CHARTROW_HEIGHT + 2 * CHART_ROW_PADDING) * required_count);
+           // this -> resize(this -> width(), (CHARTROW_HEIGHT + 2 * CHART_ROW_PADDING) * required_count);
     }
 }
 
@@ -57,12 +57,6 @@ ChartContainer::ChartContainer(ChartRow *cha,DataProcessor *dataProcessor) {
 
     //设置布局
     this -> setLayout(vboxlayout);
-
-    //设置组件的最大size和最小size
-    this -> setMaximumHeight(MAX_CHANNEL_COUNT * (2 * CHART_ROW_PADDING + CHARTROW_HEIGHT));
-    this -> setMinimumHeight((2 * CHART_ROW_PADDING + CHARTROW_HEIGHT));
-
-
 }
 
 void ChartContainer::AddChartRow(QList<ChartRow *> Rows) {
