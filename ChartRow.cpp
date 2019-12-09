@@ -107,17 +107,17 @@ ChartRow::ChartRow() {
 }
 
 void ChartRow::RePlot(const QVector<short>& chartData){
-    Cchart -> removeAllSeries();
-    series = new QLineSeries();
+    Cchart -> removeAllSeries();//首先去除现在图上的所有曲线
+    series = new QLineSeries();//新建一个曲线对象
     series -> setVisible(true);
     series -> setUseOpenGL(true);
     int length = chartData.length();
-    for(int i = 0;i < length;i ++){
+    for(int i = 0;i < length;i ++){//将新的数据点加入到曲线当中
         short temp = chartData.at(i);
         series -> append(i, temp);
     }
-    Cchart -> addSeries(series);
-    series -> attachAxis(XAxis);
+    Cchart -> addSeries(series);//将曲线加入到chart当中
+    series -> attachAxis(XAxis);//将轴附着到曲线
     series -> attachAxis(YAxis);
     DBGprint("Plot completed");
 }
@@ -232,8 +232,3 @@ void ChartRow::SetYScale(int value) {
         this->YAxis->setRange(SHRT_MIN * ((qreal)value / SLIDER_MAX_PERCENT),SHRT_MAX * ((qreal)value / SLIDER_MAX_PERCENT));
     }
 }
-
-
-
-
-

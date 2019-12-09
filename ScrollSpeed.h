@@ -2,8 +2,8 @@
 // Created by 朱原昊 on 2019/11/25.
 //
 
-#ifndef CHART_SYSTEM_SCROLL_SPEED_H
-#define CHART_SYSTEM_SCROLL_SPEED_H
+#ifndef CHART_SYSTEM_SCROLLSPEED_H
+#define CHART_SYSTEM_SCROLLSPEED_H
 
 
 #include "Property.h"
@@ -20,4 +20,4 @@ private slots:
 };
 
 
-#endif //CHART_SYSTEM_SCROLL_SPEED_H
+#endif //CHART_SYSTEM_SCROLLSPEED_H

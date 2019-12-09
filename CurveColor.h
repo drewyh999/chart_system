@@ -2,8 +2,8 @@
 // Created by 朱原昊 on 2019/11/25.
 //
 
-#ifndef CHART_SYSTEM_CURVE_COLOR_H
-#define CHART_SYSTEM_CURVE_COLOR_H
+#ifndef CHART_SYSTEM_CURVECOLOR_H
+#define CHART_SYSTEM_CURVECOLOR_H
 
 
 #include "Property.h"
@@ -22,4 +22,4 @@ private slots:
 };
 
 
-#endif //CHART_SYSTEM_CURVE_COLOR_H
+#endif //CHART_SYSTEM_CURVECOLOR_H

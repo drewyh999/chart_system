@@ -4,15 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/zhuyuanhao/CLionProjects/chart_system/Channel_Count.cpp" "/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles/chart_system.dir/Channel_Count.cpp.o"
+  "/Users/zhuyuanhao/CLionProjects/chart_system/ChannelCount.cpp" "/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles/chart_system.dir/ChannelCount.cpp.o"
   "/Users/zhuyuanhao/CLionProjects/chart_system/ChartContainer.cpp" "/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles/chart_system.dir/ChartContainer.cpp.o"
   "/Users/zhuyuanhao/CLionProjects/chart_system/ChartRow.cpp" "/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles/chart_system.dir/ChartRow.cpp.o"
-  "/Users/zhuyuanhao/CLionProjects/chart_system/Curve_Color.cpp" "/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles/chart_system.dir/Curve_Color.cpp.o"
+  "/Users/zhuyuanhao/CLionProjects/chart_system/CurveColor.cpp" "/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles/chart_system.dir/CurveColor.cpp.o"
   "/Users/zhuyuanhao/CLionProjects/chart_system/DataProcessor.cpp" "/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles/chart_system.dir/DataProcessor.cpp.o"
   "/Users/zhuyuanhao/CLionProjects/chart_system/MainController.cpp" "/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles/chart_system.dir/MainController.cpp.o"
   "/Users/zhuyuanhao/CLionProjects/chart_system/MainWindow.cpp" "/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles/chart_system.dir/MainWindow.cpp.o"
   "/Users/zhuyuanhao/CLionProjects/chart_system/Property.cpp" "/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles/chart_system.dir/Property.cpp.o"
-  "/Users/zhuyuanhao/CLionProjects/chart_system/Scroll_Speed.cpp" "/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles/chart_system.dir/Scroll_Speed.cpp.o"
+  "/Users/zhuyuanhao/CLionProjects/chart_system/ScrollSpeed.cpp" "/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles/chart_system.dir/ScrollSpeed.cpp.o"
   "/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/chart_system_autogen/mocs_compilation.cpp" "/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles/chart_system.dir/chart_system_autogen/mocs_compilation.cpp.o"
   "/Users/zhuyuanhao/CLionProjects/chart_system/main.cpp" "/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/CMakeFiles/chart_system.dir/main.cpp.o"
   )

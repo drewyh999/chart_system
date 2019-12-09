@@ -120,10 +120,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/Channel_Count.cpp">
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/ChannelCount.cpp">
 			<Option target="chart_system"/>
 		</Unit>
-		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/Channel_Count.h">
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/ChannelCount.h">
 			<Option target="chart_system"/>
 		</Unit>
 		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/ChartContainer.cpp">
@@ -138,10 +138,10 @@
 		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/ChartRow.h">
 			<Option target="chart_system"/>
 		</Unit>
-		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/Curve_Color.cpp">
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/CurveColor.cpp">
 			<Option target="chart_system"/>
 		</Unit>
-		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/Curve_Color.h">
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/CurveColor.h">
 			<Option target="chart_system"/>
 		</Unit>
 		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/DataProcessor.cpp">
@@ -168,10 +168,10 @@
 		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/Property.h">
 			<Option target="chart_system"/>
 		</Unit>
-		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/Scroll_Speed.cpp">
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/ScrollSpeed.cpp">
 			<Option target="chart_system"/>
 		</Unit>
-		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/Scroll_Speed.h">
+		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/ScrollSpeed.h">
 			<Option target="chart_system"/>
 		</Unit>
 		<Unit filename="/Users/zhuyuanhao/CLionProjects/chart_system/cmake-build-debug/chart_system_autogen/mocs_compilation.cpp">

@@ -5,34 +5,16 @@
 #include "MainController.h"
 
 void MainController::NewFile() {
-    //首先用filedialog获取文件的地址
-    QString filepath = QFileDialog::getOpenFileName(mainWindow, tr("Open file"), ".", tr("All files(*)"));
-    auto file = new QFile(filepath);
+    //首先调用私有函数从文件中读取出数据
+    auto data = ReadDataFromFile();
 
-    //如果文件没有读权限，那么报错
-    if(!file -> open(QIODevice::ReadOnly)) {
-        QMessageBox::warning(mainWindow,"Warning","无法打开文件");
+    if(data.size() == 0){//如果data的size是0，那么说明在读入文件的时候发生了错误，我们直接退出
         return;
-    }
-    QVector<short> data;
-
-    //使用数据流读入数据
-    QDataStream input(file);
-    while(!file -> atEnd()) {
-        short temp;
-        input >> temp;
-        data.append(temp);
     }
 
     //创建一个新的container，以及新的dataprocessor用于装新的表格数据，由于每一个container里面至少有一个chart，所以我们先传入一个
     auto processor = new DataProcessor(data);
-    auto cr = InitNewChartRow();
-    auto NewContainer = new ChartContainer(cr,processor);
-
-    //链接新的container到SetChannel属性以及主控制器
-    connect(channelCount,&Property::ValueChanged,NewContainer,&ChartContainer::SetChannelCount);
-    connect(NewContainer,&ChartContainer::ReQuestForChartRows,this,&MainController::HandleNewChartRowReQuest);
-    connect(this,&MainController::NewChartRowGenerated,NewContainer,&ChartContainer::AddChartRow);
+    auto NewContainer = InitNewChartContainer(processor);
 
     //根据设置,通知组件进行相应调整
     emit(curveColor -> ValueChanged(curveColor));
@@ -159,5 +141,41 @@ void MainController::HandleNewChartRowReQuest(int count) {
         list.append(InitNewChartRow());
     }
     emit(NewChartRowGenerated(list));
+}
+
+QVector<short> MainController::ReadDataFromFile() {
+    QVector<short> data;
+
+    //首先用filedialog获取文件的地址
+    filepath = QFileDialog::getOpenFileName(mainWindow, tr("Open file"), ".", tr("All files(*)"));
+    auto file = new QFile(filepath);
+
+    //如果文件没有读权限，那么我们把data的size设置为0，然后让调用方处理
+    if(!file -> open(QIODevice::ReadOnly)) {
+        QMessageBox::warning(mainWindow,"Warning","无法打开文件");
+        data.resize(0);
+        return data;
+    }
+
+    //使用数据流读入数据
+    QDataStream input(file);
+    while(!file -> atEnd()) {
+        short temp;
+        input >> temp;
+        data.append(temp);
+    }
+    return data;
+}
+
+ChartContainer *MainController::InitNewChartContainer(DataProcessor *processor) {
+    auto cr = InitNewChartRow();
+    auto NewContainer = new ChartContainer(cr,processor);//构造一个新的chartcontainer
+
+    //链接新的container到SetChannel属性以及主控制器
+    connect(channelCount,&Property::ValueChanged,NewContainer,&ChartContainer::SetChannelCount);
+    connect(NewContainer,&ChartContainer::ReQuestForChartRows,this,&MainController::HandleNewChartRowReQuest);
+    connect(this,&MainController::NewChartRowGenerated,NewContainer,&ChartContainer::AddChartRow);
+
+    return NewContainer;
 }
 

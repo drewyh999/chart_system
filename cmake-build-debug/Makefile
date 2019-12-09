@@ -136,32 +136,32 @@ chart_system_autogen/fast:
 	$(MAKE) -f CMakeFiles/chart_system_autogen.dir/build.make CMakeFiles/chart_system_autogen.dir/build
 .PHONY : chart_system_autogen/fast
 
-Channel_Count.o: Channel_Count.cpp.o
+ChannelCount.o: ChannelCount.cpp.o
 
-.PHONY : Channel_Count.o
+.PHONY : ChannelCount.o
 
 # target to build an object file
-Channel_Count.cpp.o:
-	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/Channel_Count.cpp.o
-.PHONY : Channel_Count.cpp.o
+ChannelCount.cpp.o:
+	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/ChannelCount.cpp.o
+.PHONY : ChannelCount.cpp.o
 
-Channel_Count.i: Channel_Count.cpp.i
+ChannelCount.i: ChannelCount.cpp.i
 
-.PHONY : Channel_Count.i
+.PHONY : ChannelCount.i
 
 # target to preprocess a source file
-Channel_Count.cpp.i:
-	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/Channel_Count.cpp.i
-.PHONY : Channel_Count.cpp.i
+ChannelCount.cpp.i:
+	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/ChannelCount.cpp.i
+.PHONY : ChannelCount.cpp.i
 
-Channel_Count.s: Channel_Count.cpp.s
+ChannelCount.s: ChannelCount.cpp.s
 
-.PHONY : Channel_Count.s
+.PHONY : ChannelCount.s
 
 # target to generate assembly for a file
-Channel_Count.cpp.s:
-	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/Channel_Count.cpp.s
-.PHONY : Channel_Count.cpp.s
+ChannelCount.cpp.s:
+	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/ChannelCount.cpp.s
+.PHONY : ChannelCount.cpp.s
 
 ChartContainer.o: ChartContainer.cpp.o
 
@@ -217,32 +217,32 @@ ChartRow.cpp.s:
 	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/ChartRow.cpp.s
 .PHONY : ChartRow.cpp.s
 
-Curve_Color.o: Curve_Color.cpp.o
+CurveColor.o: CurveColor.cpp.o
 
-.PHONY : Curve_Color.o
+.PHONY : CurveColor.o
 
 # target to build an object file
-Curve_Color.cpp.o:
-	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/Curve_Color.cpp.o
-.PHONY : Curve_Color.cpp.o
+CurveColor.cpp.o:
+	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/CurveColor.cpp.o
+.PHONY : CurveColor.cpp.o
 
-Curve_Color.i: Curve_Color.cpp.i
+CurveColor.i: CurveColor.cpp.i
 
-.PHONY : Curve_Color.i
+.PHONY : CurveColor.i
 
 # target to preprocess a source file
-Curve_Color.cpp.i:
-	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/Curve_Color.cpp.i
-.PHONY : Curve_Color.cpp.i
+CurveColor.cpp.i:
+	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/CurveColor.cpp.i
+.PHONY : CurveColor.cpp.i
 
-Curve_Color.s: Curve_Color.cpp.s
+CurveColor.s: CurveColor.cpp.s
 
-.PHONY : Curve_Color.s
+.PHONY : CurveColor.s
 
 # target to generate assembly for a file
-Curve_Color.cpp.s:
-	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/Curve_Color.cpp.s
-.PHONY : Curve_Color.cpp.s
+CurveColor.cpp.s:
+	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/CurveColor.cpp.s
+.PHONY : CurveColor.cpp.s
 
 DataProcessor.o: DataProcessor.cpp.o
 
@@ -352,32 +352,32 @@ Property.cpp.s:
 	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/Property.cpp.s
 .PHONY : Property.cpp.s
 
-Scroll_Speed.o: Scroll_Speed.cpp.o
+ScrollSpeed.o: ScrollSpeed.cpp.o
 
-.PHONY : Scroll_Speed.o
+.PHONY : ScrollSpeed.o
 
 # target to build an object file
-Scroll_Speed.cpp.o:
-	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/Scroll_Speed.cpp.o
-.PHONY : Scroll_Speed.cpp.o
+ScrollSpeed.cpp.o:
+	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/ScrollSpeed.cpp.o
+.PHONY : ScrollSpeed.cpp.o
 
-Scroll_Speed.i: Scroll_Speed.cpp.i
+ScrollSpeed.i: ScrollSpeed.cpp.i
 
-.PHONY : Scroll_Speed.i
+.PHONY : ScrollSpeed.i
 
 # target to preprocess a source file
-Scroll_Speed.cpp.i:
-	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/Scroll_Speed.cpp.i
-.PHONY : Scroll_Speed.cpp.i
+ScrollSpeed.cpp.i:
+	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/ScrollSpeed.cpp.i
+.PHONY : ScrollSpeed.cpp.i
 
-Scroll_Speed.s: Scroll_Speed.cpp.s
+ScrollSpeed.s: ScrollSpeed.cpp.s
 
-.PHONY : Scroll_Speed.s
+.PHONY : ScrollSpeed.s
 
 # target to generate assembly for a file
-Scroll_Speed.cpp.s:
-	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/Scroll_Speed.cpp.s
-.PHONY : Scroll_Speed.cpp.s
+ScrollSpeed.cpp.s:
+	$(MAKE) -f CMakeFiles/chart_system.dir/build.make CMakeFiles/chart_system.dir/ScrollSpeed.cpp.s
+.PHONY : ScrollSpeed.cpp.s
 
 chart_system_autogen/mocs_compilation.o: chart_system_autogen/mocs_compilation.cpp.o
 
@@ -443,18 +443,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... chart_system"
 	@echo "... chart_system_autogen"
-	@echo "... Channel_Count.o"
-	@echo "... Channel_Count.i"
-	@echo "... Channel_Count.s"
+	@echo "... ChannelCount.o"
+	@echo "... ChannelCount.i"
+	@echo "... ChannelCount.s"
 	@echo "... ChartContainer.o"
 	@echo "... ChartContainer.i"
 	@echo "... ChartContainer.s"
 	@echo "... ChartRow.o"
 	@echo "... ChartRow.i"
 	@echo "... ChartRow.s"
-	@echo "... Curve_Color.o"
-	@echo "... Curve_Color.i"
-	@echo "... Curve_Color.s"
+	@echo "... CurveColor.o"
+	@echo "... CurveColor.i"
+	@echo "... CurveColor.s"
 	@echo "... DataProcessor.o"
 	@echo "... DataProcessor.i"
 	@echo "... DataProcessor.s"
@@ -467,9 +467,9 @@ help:
 	@echo "... Property.o"
 	@echo "... Property.i"
 	@echo "... Property.s"
-	@echo "... Scroll_Speed.o"
-	@echo "... Scroll_Speed.i"
-	@echo "... Scroll_Speed.s"
+	@echo "... ScrollSpeed.o"
+	@echo "... ScrollSpeed.i"
+	@echo "... ScrollSpeed.s"
 	@echo "... chart_system_autogen/mocs_compilation.o"
 	@echo "... chart_system_autogen/mocs_compilation.i"
 	@echo "... chart_system_autogen/mocs_compilation.s"

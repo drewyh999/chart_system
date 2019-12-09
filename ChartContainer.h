@@ -6,7 +6,7 @@
 #define CHART_SYSTEM_CHARTCONTAINER_H
 #include "ui_header.h"
 #include "ChartRow.h"
-#include "Channel_Count.h"
+#include "ChannelCount.h"
 
 class ChartContainer :public QWidget{
     Q_OBJECT

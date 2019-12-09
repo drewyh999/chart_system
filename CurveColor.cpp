@@ -2,7 +2,7 @@
 // Created by 朱原昊 on 2019/11/25.
 //
 
-#include "Curve_Color.h"
+#include "CurveColor.h"
 
 void Curve_Color::ShowSettingWindow() {
     this -> setting_widget = new QWidget;

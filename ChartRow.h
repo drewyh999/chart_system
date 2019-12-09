@@ -7,8 +7,8 @@
 
 
 #include "ui_header.h"
-#include "Curve_Color.h"
-#include "Scroll_Speed.h"
+#include "CurveColor.h"
+#include "ScrollSpeed.h"
 #include "DataProcessor.h"
 #define COMBOBOX_WIDTH 100
 #define COMBOBOX_HEIGHT 100

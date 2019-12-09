@@ -30,14 +30,17 @@ public:
     signals:
         void NewChartRowGenerated(QList<ChartRow*>);
 public slots:
-    void NewFile();//打开一个新的二进制文件,并且按照short读入,同时初始化新的chartcontainer,来显示这个数据
+    void NewFile();//handle打开新文件时需要做的事情,首先是调用私有函数读入文件中的数据，然后再掉InitNewChartContainer用来初始化chartcintainer来显示数据
     void OnClosing();//用于接收窗口关闭信号的函数，在关闭窗口时，主控制器需要进行配置文件的写入
     ChartRow* InitNewChartRow();//初始化一个新的chartRow(并且链接好property)
     void HandleNewChartRowReQuest(int);//处理chartcontainer发来的新建chartrow信号
 private:
     //从配置文件中读取配置信息，如果配置文件不存在那么我们创建一个默认的属性
+    QVector<short> ReadDataFromFile();//从文件读入数据
+    ChartContainer* InitNewChartContainer(DataProcessor* processor);//初始化一个新的ChartContainer,为他链接好各种属性，由于ChartContainer构造时是需要一个dataprocessor的所以
     void WriteConfig();//根据属性，写配置文件
     void ReadConfig();//读取配置文件
+    QString filepath;//用于保存读取到的文件的路径
 };
 
 
