@@ -12,9 +12,9 @@ class Property : public QObject{
 signals:
     void ValueChanged(Property *prop);//用于传输属性值改变的信号
 public slots:
-    virtual void ShowSettingWindow(){};//用于接收调出设置窗口的信号的槽函数
+    virtual void ShowSettingWindow(){};//用于接收调出设置窗口的信号的槽函数，这个函数只会显示设置窗口
 private slots:
-    virtual void SetComfirm(){};//用于接收在设置窗口中点击确认键之后的槽函数，会反馈一个对话框并且发出信号
+    virtual void SetComfirm(){};//用于接收在设置窗口中点击确认键之后的槽函数，会反馈一个对话框并且发出信号，真正的修改属性值
 public:
     QWidget *setting_widget;
     const char * label;//这个label是为了在加入到菜单时方便菜单项的字符串添加

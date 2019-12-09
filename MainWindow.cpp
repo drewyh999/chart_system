@@ -2,7 +2,7 @@
 #include "MainWindow.h"
 #include <string>
 
-//将属性设置加入到菜单当中去
+
 
 void MainWindow::AddPropertySettings(QList<Property *> props) {
     auto menubar = this -> menuBar();

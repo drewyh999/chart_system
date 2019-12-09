@@ -27,7 +27,10 @@ void Channel_Count::SetComfirm() {
         return;
     }
 
+
     this -> M_Channels_Count = new_channel_count;
+
+
     DBGprint("new channel count is %d\n",this -> M_Channels_Count);
     QMessageBox::information(setting_widget,"info","Setting successfully done");
     emit(ValueChanged(this));

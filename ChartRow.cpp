@@ -59,7 +59,7 @@ ChartRow::ChartRow() {
     //初始化combobox
     comboBox = new QComboBox;
     comboBox -> addItem("原始");
-    comboBox -> addItem("微分");
+    comboBox -> addItem("导数");
     comboBox -> addItem("积分");
     comboBox -> addItem("绝对值");
     comboBox -> setFixedSize(COMBOBOX_WIDTH,COMBOBOX_HEIGHT);

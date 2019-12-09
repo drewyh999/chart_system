@@ -18,5 +18,17 @@ void DataProcessor::Process(const QString& mode) {
         }
         emit(DataChanged(result));
     }
+    else if(mode == "积分"){
+        for(long long i = 0;i < data.size() - 1;i ++){
+            result[i] = (data[i] + data[i + 1]) / 2;
+        }
+        emit(DataChanged(result));
+    }
+    else if(mode == "导数"){
+        for(long long i = 0;i < data.size() - 1;i ++){
+            result[i] = (data[i + 1] - data[i]);
+        }
+        emit(DataChanged(result));
+    }
 }
 

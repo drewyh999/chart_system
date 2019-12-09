@@ -25,12 +25,12 @@ public://c++的静态变量必须
 private:
     MainWindow *mainWindow;
 public:
-    MainController();//构造函数需要做的事情是初始化主窗口并且读入配置文件
+    MainController();//构造函数需要做的事情是初始化主窗口并且读入配置文件，并且初始化一个主窗口，在主窗口的菜单中添加好属性设置对象
     void ShowMainWindow();//显示主窗口
     signals:
         void NewChartRowGenerated(QList<ChartRow*>);
 public slots:
-    void NewFile();//打开一个新的二进制文件,并且按照short读入
+    void NewFile();//打开一个新的二进制文件,并且按照short读入,同时初始化新的chartcontainer,来显示这个数据
     void OnClosing();//用于接收窗口关闭信号的函数，在关闭窗口时，主控制器需要进行配置文件的写入
     ChartRow* InitNewChartRow();//初始化一个新的chartRow(并且链接好property)
     void HandleNewChartRowReQuest(int);//处理chartcontainer发来的新建chartrow信号
