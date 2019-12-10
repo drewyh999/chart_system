@@ -22,8 +22,6 @@ ChartRow::ChartRow() {
 
     //根据Qt需要用ChartView容纳Chart
     auto chartView = new QChartView(Cchart);
-    //设置rubberBand使得chart具有缩放功能
-//    chartView -> setRubberBand(QChartView::RectangleRubberBand);
     chartView -> setRenderHint(QPainter::Antialiasing);
 
 

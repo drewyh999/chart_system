@@ -18,7 +18,7 @@
 
 class MainController : public QObject{
 Q_OBJECT
-public://c++的静态变量必须
+public:
      Scroll_Speed *scrollSpeed;
      Channel_Count *channelCount;
      Curve_Color *curveColor;
