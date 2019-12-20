@@ -159,8 +159,9 @@ void ChartRow::OnXAxisRangeChange(qreal min, qreal max) {
     qreal all_width = series -> count();//总共的轴的范围是
 
     isScrolling = true;
+    int ori_max = XScrollBar -> maximum();
     XScrollBar -> setMaximum(  100 * (int)(all_width -  visible_width));//滚动条的最大值是全长减去可见长度(由于范围是个浮点数，而滚动条value只能是整数，所以我们扩大100倍尽量获得精确的值)
-    XScrollValue =  100 * (((min)/all_width)  *(all_width - visible_width));//设置新的滚动条值，并且也扩大100倍，以获得相同比例
+    XScrollValue =  100 * (((min)/ori_max)  *(all_width - visible_width));//设置新的滚动条值，并且也扩大100倍，以获得相同比例
     XScrollBar -> setValue(XScrollValue);
     isScrolling = false;
 }

@@ -45,12 +45,3 @@ void MainWindow::AddTab(ChartContainer *CC,const QString& filename) {
     s -> setWidget(tab);
     this -> setCentralWidget(s);
 }
-
-
-
-
-
-
-
-
-
