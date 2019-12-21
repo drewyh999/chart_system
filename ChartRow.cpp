@@ -117,7 +117,7 @@ void ChartRow::RePlot(const QVector<short>& chartData){
     Cchart -> addSeries(series);//将曲线加入到chart当中
     series -> attachAxis(XAxis);//将轴附着到曲线
     series -> attachAxis(YAxis);
-    DBGprint("Plot completed");
+    DBGprint("Plot completed\n");
 }
 
 void ChartRow::OnYAxisRangeChange(qreal min, qreal max) {
@@ -160,8 +160,8 @@ void ChartRow::OnXAxisRangeChange(qreal min, qreal max) {
 
     isScrolling = true;
     int ori_max = XScrollBar -> maximum();
-    XScrollBar -> setMaximum(  100 * (int)(all_width -  visible_width));//滚动条的最大值是全长减去可见长度(由于范围是个浮点数，而滚动条value只能是整数，所以我们扩大100倍尽量获得精确的值)
-    XScrollValue =  100 * (((min)/ori_max)  *(all_width - visible_width));//设置新的滚动条值，并且也扩大100倍，以获得相同比例
+    XScrollBar -> setMaximum(  (int)(all_width -  visible_width));//滚动条的最大值是全长减去可见长度(由于范围是个浮点数，而滚动条value只能是整数，所以我们扩大100倍尽量获得精确的值)
+    XScrollValue =  (int)(((min)/ori_max)  *(all_width - visible_width));//设置新的滚动条值，并且也扩大100倍，以获得相同比例
     XScrollBar -> setValue(XScrollValue);
     isScrolling = false;
 }
@@ -170,6 +170,8 @@ void ChartRow::OnXScrollValueChange(int value) {
     //同样，我们只在滚动条停下的时候进行渲染
     if (!isScrolling) {
         isScrolling = true;
+        DBGprint("received Scroll value change original scroll value is %d new one is %d \n",XScrollValue,scrollSpeed * ((double)value - XScrollValue));
+        DBGprint("the Scroll Speed is %d\n",scrollSpeed);
         double scroll_distance = scrollSpeed * ((double)value - XScrollValue);//获得需要移动的距离
         Cchart -> scroll(scroll_distance, 0);//移动chart
         XScrollValue = value;//将ScrollValue设置为现在的值

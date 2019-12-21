@@ -22,13 +22,5 @@ int main(int argc, char *argv[]) {
 }
 
 //计算度为1的节点
-int Sum(BiTree t){
-    if(t == null) return 0;
-    else if((t -> lchild != null && t -> rchild == null)||
-            (t -> lchild == null && t -> rchild != null)){
-        return 1 + Sum(t -> lchild) + Sum(t -> rchild);
-    }
-    return Sum(t -> lchild) + Sum(t -> rchild);
-}
 
 

@@ -8,13 +8,13 @@
 /Users/zhuyuanhao/CLionProjects/chart_system/ChartContainer.h
  mmc:Q_OBJECT
 /Users/zhuyuanhao/CLionProjects/chart_system/ScrollSpeed.cpp
+/Users/zhuyuanhao/CLionProjects/chart_system/Channel_Count.cpp
 /Users/zhuyuanhao/CLionProjects/chart_system/MainController.h
  mmc:Q_OBJECT
-/Users/zhuyuanhao/CLionProjects/chart_system/Channel_Count.cpp
 /Users/zhuyuanhao/CLionProjects/chart_system/ChannelCount.cpp
-/Users/zhuyuanhao/CLionProjects/chart_system/MainWindow.h
- mmc:Q_OBJECT
 /Users/zhuyuanhao/CLionProjects/chart_system/ChannelCount.h
+ mmc:Q_OBJECT
+/Users/zhuyuanhao/CLionProjects/chart_system/MainWindow.h
  mmc:Q_OBJECT
 /Users/zhuyuanhao/CLionProjects/chart_system/Property.h
  mmc:Q_OBJECT

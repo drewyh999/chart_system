@@ -16,9 +16,7 @@ void MainController::NewFile() {
     auto processor = new DataProcessor(data);
     auto NewContainer = InitNewChartContainer(processor);
 
-    //根据设置,通知组件进行相应调整
-    emit(curveColor -> ValueChanged(curveColor));
-    emit(scrollSpeed -> ValueChanged(scrollSpeed));
+    //根据设置,通知container进行通道数的调整
     emit(channelCount -> ValueChanged(channelCount));
 
     //将Container添加到主窗口的Tab中去
@@ -31,8 +29,12 @@ void MainController::NewFile() {
 ChartRow *MainController::InitNewChartRow() {
     auto chartrow = new ChartRow;
     //将滚动速度以及曲线颜色与chartrow链接
-    connect(scrollSpeed,&Property::ValueChanged,chartrow,&ChartRow::SetScrollSpeed);
     connect(curveColor,&Property::ValueChanged,chartrow,&ChartRow::SetCurveColor);
+    connect(scrollSpeed,&Property::ValueChanged,chartrow,&ChartRow::SetScrollSpeed);
+
+    //将chartrow的样式设置为现在设置的样式，同时将chartrow中的滚动速度也设置为现在的滚动速度
+    emit(curveColor -> ValueChanged(curveColor));
+    emit(scrollSpeed -> ValueChanged(scrollSpeed));
 
     return chartrow;
 }

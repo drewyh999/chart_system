@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+/Users/zhuyuanhao/CLionProjects/chart_system/ChannelCount.h
+Property.h
+/Users/zhuyuanhao/CLionProjects/chart_system/Property.h
+
+/Users/zhuyuanhao/CLionProjects/chart_system/ChartContainer.h
+ui_header.h
+/Users/zhuyuanhao/CLionProjects/chart_system/ui_header.h
+ChartRow.h
+/Users/zhuyuanhao/CLionProjects/chart_system/ChartRow.h
+ChannelCount.h
+/Users/zhuyuanhao/CLionProjects/chart_system/ChannelCount.h
+
 /Users/zhuyuanhao/CLionProjects/chart_system/ChartRow.cpp
 ChartRow.h
 /Users/zhuyuanhao/CLionProjects/chart_system/ChartRow.h
@@ -29,6 +41,26 @@ ui_header.h
 /Users/zhuyuanhao/CLionProjects/chart_system/ui_header.h
 QObject
 -
+
+/Users/zhuyuanhao/CLionProjects/chart_system/MainController.cpp
+MainController.h
+/Users/zhuyuanhao/CLionProjects/chart_system/MainController.h
+
+/Users/zhuyuanhao/CLionProjects/chart_system/MainController.h
+QObject
+-
+Property.h
+/Users/zhuyuanhao/CLionProjects/chart_system/Property.h
+MainWindow.h
+/Users/zhuyuanhao/CLionProjects/chart_system/MainWindow.h
+
+/Users/zhuyuanhao/CLionProjects/chart_system/MainWindow.h
+ui_header.h
+/Users/zhuyuanhao/CLionProjects/chart_system/ui_header.h
+Property.h
+/Users/zhuyuanhao/CLionProjects/chart_system/Property.h
+ChartContainer.h
+/Users/zhuyuanhao/CLionProjects/chart_system/ChartContainer.h
 
 /Users/zhuyuanhao/CLionProjects/chart_system/Property.h
 ui_header.h
