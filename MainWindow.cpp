@@ -39,9 +39,10 @@ MainWindow::MainWindow() {
 }
 
 void MainWindow::AddTab(ChartContainer *CC,const QString& filename) {
+    if(CC == nullptr){ return; }
     this -> tab -> addTab(CC,filename);
     //设置为可以滚动
-    QScrollArea *s = new QScrollArea(this);
+    auto *s = new QScrollArea(this);
     s -> setWidget(tab);
     this -> setCentralWidget(s);
 }
