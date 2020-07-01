@@ -20,7 +20,8 @@ void MainController::NewFile() {
     emit(channelCount -> ValueChanged(channelCount));
 
     //将Container添加到主窗口的Tab中去
-    mainWindow -> AddTab(NewContainer,filepath);
+    displaypath = filepath.split("/")[filepath.split("/").size() - 1];//将文件路径按'/'分开之后最后一个字串即为文件的名字
+    mainWindow -> AddTab(NewContainer,displaypath);
 
     //设置主窗口的初始大小为当前设置通道数的大小
     mainWindow -> resize(CHARTROW_WIDTH + CHARTROW_EXTRA_PADDING,channelCount -> M_Channels_Count * (CHARTROW_HEIGHT + CHARTROW_EXTRA_PADDING));
@@ -75,7 +76,7 @@ void MainController::ReadConfig() {
         {
             QByteArray fileline = file -> readLine();
             QString str(fileline);
-            DBGprint("Reading a line of %d\n",str.length());
+            DBGprint("Config file reading : Reading a line of %d\n",str.length());
 
             /* 配置文件的格式为 [PropertyName]:[Value]*/
 

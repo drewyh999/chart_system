@@ -41,6 +41,7 @@ private:
     void WriteConfig();//根据属性，写配置文件
     void ReadConfig();//读取配置文件
     QString filepath;//用于保存读取到的文件的路径
+    QString displaypath;//用于保存显示在tab上的路径名称
 };
 
 
